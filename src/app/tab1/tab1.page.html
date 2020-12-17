@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Регистрация заявки
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,38 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="small">Регистрация заявки</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+  <!-- Textarea in an item with a floating label -->
+  <ion-item>
+    <ion-label position="floating">Описание проблемы</ion-label>
+    <ion-textarea></ion-textarea>
+  </ion-item>
+
+    <!-- <app-explore-container name="Tab 1 page"></app-explore-container>-->
+
+  <ion-item>
+    <ion-label>Дата</ion-label>
+    <ion-datetime displayFormat="D MMM YYYY"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Время</ion-label>
+    <ion-datetime displayFormat="HH:mm"></ion-datetime>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Статус</ion-label>
+      <ion-select value="activ" okText="Выбрать" cancelText="Отмена">
+        <ion-select-option value="activ">Активно</ion-select-option>
+        <ion-select-option value="inwork">В работе</ion-select-option>
+        <ion-select-option value="finish">Завершено</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+
+  </ion-content>
